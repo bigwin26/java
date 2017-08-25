@@ -4,34 +4,28 @@ import java.util.Scanner;
 
 public class GradeConsole {
 	
-	Grade grade = new Grade();
+	static int menuCreate() {
+		int num;
+		
+		System.out.println("┌─────────┐");
+		System.out.println("│  ──메인메뉴──│");
+		System.out.println("└─────────┘");
+		System.out.println("\t1.성적입력");
+		System.out.println("\t2.성적출력");
+		System.out.println("\t3.종료");
+		System.out.print("선택>_");
+		Scanner scan = new Scanner(System.in);
+		num = scan.nextInt();
+		return num;
+		
+		
+	}
 
 	public void input() {
-		Scanner scan = new Scanner(System.in);
-		int kor = scan.nextInt();
-		int eng = scan.nextInt();
-		int math = scan.nextInt();
-		
-		grade.setKor(kor);
-		grade.setEng(eng);
-		grade.setMath(math);
 		
 	}
 
 	public void output() {
-		int kor = grade.getKor();
-		int eng = grade.getEng();
-		int math = grade.getMath();
-		int total = grade.total();
-		double avg = grade.avg();
-		
-		
-		System.out.println(kor);
-		System.out.println(eng);
-		System.out.println(math);
-		System.out.println(total);
-		System.out.println(avg);
 		
 	}
-
 }

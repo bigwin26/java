@@ -6,36 +6,34 @@ public class GradeProgram {
 
 	public static void main(String[] args) {
 
-		GradeConsole console = new GradeConsole();
-		
-		//성적입력
-		//성적출력
-		//종료
+		GradeConsole grade = new GradeConsole();
+			
 		int menu;
 		
 		EXIT:
 		while(true) {
-			menu = inputmenu();
+			
+			menu = grade.menuCreate();
+			
 			switch(menu) {
 			case 1:
-				console.input();
-				break;
+				grade.input();
 			case 2:
-				console.output();
-				break;
+				grade.output();
 			case 3:
 				break EXIT;
-			}
+			default:
+				System.out.println("메뉴에 있는 번호를 입력해주세요.");
+					
 		}
-	}
-
-	private static int inputmenu() {
-		int num;
-		Scanner scan = new Scanner(System.in);
+			
 		
-		System.out.print("\n1.성적입력 \n2.성적출력 \n3.종료");
-		num = scan.nextInt();
-		return num;
-	}
+		
+		//1.성적입력
+		//2.성적출력
+			//3.종료
+}
+}
 
+	
 }
